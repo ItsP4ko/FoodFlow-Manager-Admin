@@ -14,10 +14,11 @@ namespace Controladora.Ayuda
         private readonly AyudaService _ayudaService;
         private readonly ABMRestaurante _abmRestaurante;
 
-        public ControladoraAyuda()
+
+        public ControladoraAyuda(int idUsuario)
         {
             _ayudaService = new AyudaService();
-            _abmRestaurante = new ABMRestaurante();
+            _abmRestaurante = new ABMRestaurante(idUsuario);
         }
 
         public void AyudaGmail(int idRestaurante)

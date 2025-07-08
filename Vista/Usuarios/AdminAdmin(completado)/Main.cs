@@ -17,6 +17,7 @@ namespace Vista
         private readonly PasswordCheck _passwordCheck; 
         private int _idRestauranteSeleccionado;
         private int _idPlanSeleccionado;
+        public int _idUsuario;
         public int Opcion = 0;
         public int opcionPlan = 0;
         #endregion
@@ -27,7 +28,8 @@ namespace Vista
             InitializeComponent();
             _controladoraABMRestaurante = new ABMRestaurante(idUsuario);
             _controladoraDGV = new ControladoraDGV();
-            _passwordCheck = new PasswordCheck();  
+            _passwordCheck = new PasswordCheck(); 
+            _idUsuario = idUsuario;
             
             this.FormClosing += Main_FormClosing;
         }

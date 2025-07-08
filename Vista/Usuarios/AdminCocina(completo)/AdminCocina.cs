@@ -47,7 +47,7 @@ namespace Vista.Usuarios.AdminCocina
             _estilos = new Panel_UserControl_Estilos();
             _platosAdd = new PlatosControlAdd(_idRestaurante, idUsuario);
             _ExtraAdd = new ExtrasControlAgregar(_idRestaurante, idUsuario);
-            _controladoraAyuda = new Controladora.Ayuda.ControladoraAyuda();          
+            _controladoraAyuda = new Controladora.Ayuda.ControladoraAyuda(idUsuario);          
 
             this.FormClosing += AdminCocina_FormClosing;
         }

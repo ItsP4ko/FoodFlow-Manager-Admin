@@ -42,10 +42,10 @@ namespace Vista.AdminRestaurante
 
         public MainRestaurate(int IdRestaurante, int idUsuario)
         {
-            _controladoraABMRestaurante = new ABMRestaurante();
+            _controladoraABMRestaurante = new ABMRestaurante(idUsuario);
             _controladoraDGV = new ControladoraDGV();
             _controladoraMenu = new ControladoraMenu(idUsuario);
-            _controladoraAyuda = new Controladora.Ayuda.ControladoraAyuda();
+            _controladoraAyuda = new Controladora.Ayuda.ControladoraAyuda(idUsuario);
             _passwordCheck = new PasswordCheck(); 
             _idRestaurante = IdRestaurante;
             _idUsuario = idUsuario;
